@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8" />
+    <title>All results</title>
+</head>
+<body>
+<div th:if="not ${allInvoices.isEmpty()}">
+    <h1>All registered times:</h1>
+    <table border="1"  width=”400” cellpadding=”10” cellspacing=”5”>
+        <tr>
+            <!--<th width=”150”></th>-->
+            <th>id</th>
+            <th>idInvoice</th>
+            <th>numberInvoice</th>
+            <th>startOfContractle</th>
+            <th>stopOfContractl</th>
+            <th>costInvoice</th>
+        </tr>
+
+
+
+        <tr th:each="singleTime: ${allInvoices}" th:object="${singleTime}">
+            <td th:text="*{id}">John</td>
+            <td th:text="*{idInvoice}">John</td>
+            <td th:text="*{numberInvoice}">John</td>
+            <td th:text="*{startOfContractl}">John</td>
+            <td th:text="*{stopOfContractl}">John</td>
+            <td th:text="*{costInvoice}">John</td>
+
+        </tr>
+    </table>
+</div>
+<div th:if="${allInvoices.isEmpty()}">
+    <h1>There is no data yet :(</h1>
+</div>
+
+<a th:href="@{/back}">Back</a>
+</body>
+</html>

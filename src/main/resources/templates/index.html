@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8" />
+    <title>Invoices</title>
+
+    <link th:href="@{/css/style.css}" rel="stylesheet" />
+
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+    <div id="container">
+        <div class="titlepage">
+
+            <h1>Invoices</h1>
+        </div>
+
+        <form action="#" method="post" th:action="@{/save}" th:object="${invoices}" th:for="SaveInvoices">
+
+            <div class="allcontent">
+
+                <div class="row">
+                <div class="datainsert">
+                            <label for="idInvoice">Id Invoice</label>
+                </div>
+                <div class="datainsertnumberInvoice">
+                            <input type="text" id="idInvoice" th:field="*{idInvoice}" />
+                </div>
+                </div>
+
+                <div class="row">
+                        <div class="datainsert">
+                                    <label for="numberInvoice">Number Invoice</label>
+                        </div>
+                        <div class="datainsertnumberInvoice">
+                                    <input type="text" id="numberInvoice" th:field="*{numberInvoice}" />
+                        </div>
+                </div>
+
+
+
+                <div class="row">
+                <div class="datainsert">
+                    <label for="startOfContractl">Start Of Contractl</label>
+                </div>
+                <div class="datainsertnumberInvoice">
+                    <input type="date" id="startOfContractl" th:field="*{startOfContractl}" />
+                </div>
+                </div>
+
+                <div class="row">
+                <div class="datainsert">
+                            <label for="stopOfContractl">Stop Of Contractl</label>
+                </div>
+                <div class="datainsertnumberInvoice">
+                            <input type="date" id="stopOfContractl" th:field="*{stopOfContractl}" />
+                </div>
+                </div>
+
+            <div class="row">
+                <div class="datainsert">
+                            <label for="costInvoice">Cost Invoice</label>
+                </div>
+                <div class="datainsertnumberInvoice">
+                            <input type="text" id="costInvoice" th:field="*{costInvoice}" />
+                </div>
+            </div>
+            <div class="row">
+                <div class="datainsert">
+                    <input type="submit" value="Save Invoices" id="SaveInvoices"/>
+                   <!-- <input type="submit" value="Save Invoices" />-->
+                </div>
+            </div>
+            </div>
+                <div class="allcontent">
+
+
+                        <div class="row">
+                            <div class= "titlePageGenerateDocuments">
+                                <h4>Generate Documents</h4>
+                            </div>
+
+
+                        </div>
+                </div>
+        </form>
+
+
+        <!--<form action="#" method="post" th:action="@{/save}" th:object="${invoices}" th:for="SaveInvoices">-->
+            <form action="#" method="post" th:action="@{/saveTxtInvoiceGenerator}"   th:for="InvoiceGenerator" >
+                <!--<input type="submit" value="Save Invoices" id="SaveInvoices"/>-->
+                <div class="row">
+                    <div class="datainsert">
+
+                    <input type="submit" value="Invoices Generator" id="InvoiceGenerator" />
+
+
+                    <!--<a th:href="@{/show}">Show all times</a>-->
+                </div>
+                </div>
+
+            </form>
+
+
+        <form action="#" method="get" th:action="@{/showAllInvoices}"   th:for="showAllInvoices" >
+            <!--<input type="submit" value="Save Invoices" id="SaveInvoices"/>-->
+            <div class="row">
+                <div class="datainsert">
+
+                    <input type="submit" value="Show All Invoices" id="showAllInvoices" />
+
+
+                    <!--<a th:href="@{/show}">Show all times</a>-->
+                </div>
+            </div>
+
+        </form>
+
+
+
+    </div>
+</body>
+</html>

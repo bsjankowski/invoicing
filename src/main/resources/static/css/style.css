@@ -1,0 +1,92 @@
+#container {
+    width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: 'Roboto', sans-serif;
+
+}
+.titlepage
+ {
+     width: 960px;
+     margin: 20px;
+     text-align: center;
+ }
+/*.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}*/
+
+/*font-size: 15px;*/
+.datainsert
+{
+    margin: 5px;
+    float: left;
+}
+.datainsertnumberInvoice
+   {
+       float: right;
+       margin: 5px;
+   }
+
+
+
+input{
+    /*margin-top: 6px;*/
+    /*width: 25%;*/
+    /*padding: 5px;*/
+    width: 130px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    /*//padding: 1px 5px;*/
+
+    /*resize: vertical;*/
+
+}
+
+/*.row:after {
+     content: "";
+     display: table;
+     clear: both;
+     !*width: 600px;*!
+ }*/
+
+
+
+.row{
+    clear: both;
+}
+.allcontent
+{
+    float: left;
+    width: 350px;
+}
+
+
+
+
+
+.titlePageGenerateDocuments
+{
+    width: 630px;
+    margin: 10px;
+    text-align: center;
+
+}
+
+.generateDocuments
+{
+    float: left;
+    /*width: 40%;*/
+    margin-top: 10px;
+    font-size: 10px;
+}
+
+
+
+
+
+
+
+
+
